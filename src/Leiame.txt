@@ -18,3 +18,20 @@ yarn add --save styled-components
 That's all you need to do, you are now ready to use it in your app! (yep, no build step needed 👌)
 
 NOTE
+
+
+
+
+
+
+
+
+
+
+Sempre que possível devemos evitar colocarmos a declaração de componentes dentro do método render dentro de componente baseados em classes e no caso de componentes funcionais não devemos declarar um componente dentro do outro.
+
+Isso porque, caso um componente seja declarado dentro do método render ou dentro de um outro componente funcional ele será re-declarado a cada nova renderização e o React não conseguirá fazer cache desse componente, o que pode atrasar e muito a renderização da página.
+
+Por isso, lembre-se de declarar seus componentes e styled components fora dos métodos de renderização do React.
+
+https://styled-components.com/docs/basics#define-styled-components-outside-of-the-render-method
